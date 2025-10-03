@@ -6,43 +6,37 @@ public class T00 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int b1, b2, hpk, hp;
+        int a, b, hasil;
 
-        b1 = Integer.parseInt(input.nextLine());
-        b2 = Integer.parseInt(input.nextLine());
-        if (b1 % 2 == 0) {
+        a = Integer.parseInt(input.nextLine());
+        b = Integer.parseInt(input.nextLine());
+        if (a % 2 == 0) {
             System.out.println("Bilangan pertama: Genap");
         } else {
-            System.out.println("Bilangan Pertama : Ganjil");
+            System.out.println("Bilangan pertama: Ganjil");
         }
-        if (b2 % 2 == 0) {
+        if (b % 2 == 0) {
             System.out.println("Bilangan kedua: Genap");
         } else {
             System.out.println("Bilangan kedua: Ganjil");
         }
-        if (b1 > b2) {
+        if (a == b) {
+            System.out.println("Kedua bilangan sama besar");
+        }
+        if (a > b) {
             System.out.println("Bilangan pertama lebih besar");
         } else {
-            if (b1 < b2) {
-                System.out.println("Bilangan kedua lebih besar");
+            System.out.println("Bilangan kedua lebih besar");
+        }
+        if (a % 2 == 0 && b % 2 == 0) {
+            hasil = a + b;
+            System.out.println("hasil penjumlahan: " + hasil);
+        } else {
+            if (a % 2 != 0 && b % 2 != 0) {
+                hasil = a * b;
+                System.out.println("Hasil perkalian: " + hasil);
             } else {
-                System.out.println("Kedua bilangan sama besar");
-            }
-        }
-        if (b1 % 2 == 0 && b2 % 2 == 0) {
-            hp = b1 + b2;
-            System.out.println("Hasil penjumlahan:" + hp);
-        } else {
-            if (b1 % 2 != 0 && b2 % 2 != 0) {
-                hpk = b1 * b2;
-                System.out.println("Hasil perkalian:" + hpk);
-            }
-        }
-        if (b1 % 2 != 0 && b2 % 2 == 0) {
-            System.out.println("Berbeda jenis");
-        } else {
-            if (b2 % 2 != 0 && b1 % 2 == 0) {
-                System.out.println("Berbeda jenis");
+                System.out.println("berbeda jenis");
             }
         }
     }
